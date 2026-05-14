@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const api = axios.create({
-  baseURL: 'https://backend-production-0f56.up.railway.app/api'
+  baseURL: import.meta.env.VITE_API_URL || 'https://backend-production-87647.up.railway.app/'
 })
 
 export default api
