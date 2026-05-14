@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const api = axios.create({
-  baseURL: 'https://yesaya.onrender.com/api'
+  baseURL: 'backend-production-2d03.up.railway.app'
 })
 
 export default api
