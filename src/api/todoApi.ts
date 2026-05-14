@@ -1,7 +1,21 @@
-import axios from 'axios'
+import api from './api'
 
-const API = axios.create({
-  baseURL: 'http://localhost:5000/api',
-})
+// GET TODOS
+export const getTodos = (params?: any) => {
+  return api.get('/todos', { params })
+}
 
-export default API
+// CREATE TODO
+export const createTodo = (data: any) => {
+  return api.post('/todos', data)
+}
+
+// UPDATE TODO
+export const updateTodo = (id: number, data: any) => {
+  return api.put(`/todos/${id}`, data)
+}
+
+// DELETE TODO
+export const deleteTodo = (id: number) => {
+  return api.delete(`/todos/${id}`)
+}
